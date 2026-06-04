@@ -40,9 +40,11 @@ Make MCP queries to get current campaign performance. Include conversion fields 
 
 **All data is pulled per-campaign to prevent MCP response truncation.** A single bulk query across all campaigns silently drops data.
 
-Initialize partial file directory:
+Initialize partial file directory — **wipe any files from the previous
+cycle first** so `aggregate.py` only sees this cycle's data:
 
 ```bash
+rm -f data/partials/*.json
 mkdir -p data/partials
 ```
 
