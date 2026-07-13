@@ -12,9 +12,11 @@ data_source:
 campaigns:
   - gg_nam_dg_search_brand_cosmos
   - gg_nam_dg_search_competitor_cosmos
-  - gg_nam_dg_search_generic_codereview_cosmos
+  - gg_nam_dg_search_generic_codereview_cosmos  # PAUSED since C9
   - gg_nam_dg_search_generic_cosmos
   - gg_nam_dg_search_generic_platform_cosmos
+  - gg_nam_dg_search_solutions_code_review_cosmos
+  - gg_nam_dg_search_solutions_incident_management_cosmos
 
 constraints:
   headline_max_chars: 30
@@ -80,13 +82,23 @@ ad_groups:
     campaign_type: generic
     intent: category
 
-  # Generic — code review (gg_nam_dg_search_generic_codereview_cosmos)
+  # Generic — code review (gg_nam_dg_search_generic_codereview_cosmos) — PAUSED
   code_review:
     campaign_type: generic
     intent: capability
   pull_request:
     campaign_type: generic
     intent: capability
+
+  # Solutions — code review (gg_nam_dg_search_solutions_code_review_cosmos)
+  code_review_solutions_adgroup:
+    campaign_type: solutions
+    intent: solution
+
+  # Solutions — incident management (gg_nam_dg_search_solutions_incident_management_cosmos)
+  incident_management_solutions_adgroup:
+    campaign_type: solutions
+    intent: solution
 
 # MCP query fields — used by program.md to build queries
 mcp_fields:
